@@ -53,3 +53,13 @@
     * ```mysqladmin -u root status/shutdown -p```
   - Client: ```mysql -u root -p```
 * **PostgreSQL:** build-postgresql.sh
+  - The configuration directory may include ```pg_hba.conf```, ```pg_ident.conf```, ```pg_service.conf``` and ```postgresql.conf```
+    * In ```pg_hba.conf```, please comment at the very end every line begining with ```@remove-line-for-nolocal``` and type ```scram-sha-256``` as ```METHOD```
+  - Initialization: ```initdb -d <data_dir> -U postgres -W -E UTF8 -A scram-sha-256```
+    * To add users, follow these steps:
+      - ```psql -d template1```
+      - ```\l```
+      - ```CREATE DATABASE "username" WITH OWNER "username" ENCODING 'UTF8';```
+      - ```\q```
+  - Server: ```pg_ctl -D <conf/data_dir> -U <username> start/stop/status```
+  - Client: ```psql -U <username>```
