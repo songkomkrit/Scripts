@@ -70,6 +70,6 @@ for student_dir in $maindirpath/*; do
 	./grade-single.sh -s $sleep -n $sqlnum -p $password -d $student_dir | tee "${outtxtdirpath}/${outname}.txt"
 	sleep $sleep 
 	if $expdf; then
-		paps "${outtxtdirpath}/${outname}.txt" | ps2pdf - "${outpdfdirpath}/${outname}.pdf"
+		cupsfilter "${outtxtdirpath}/${outname}.txt" > "${outpdfdirpath}/${outname}.pdf"
 	fi
 done
