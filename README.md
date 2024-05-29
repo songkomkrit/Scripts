@@ -22,11 +22,13 @@
 * **OpenSSL:** BuildOpenSSL.ps1
   - Perl and NASM (www.nasm.us) required
   - setx OPENSSL_CONF -m <path_to_openssl.cnf>
-* **MongoDB C/C++ Drivers:** libmongocrypt.ps1 &rarr; mongo-c-driver.ps1 &rarr; mongo-cxx-driver.ps1
-  - OpenSSL required
-* **cURL:** BuildCurl.ps1 (OpenSSL required)
-* **Mosquitto MQTT:** BuildMosquitto.ps1 (OpenSSL required)
+* **cURL:** BuildCurl.ps1
+  - Here OpenSSL is used as an SSL backend in addition to the default Microsoft Schannel
+* **Mosquitto MQTT:** BuildMosquitto.ps1
   - mosquitto.exe (broker) is in ```sbin``` directory
   - mosquitto_pub.exe (publisher) and mosquitto_sub.exe (subscriber) are in ```bin``` directory
+  - OpenSSL is required when Mosquitto is built with SSL/TLS support (WITH_TLS = ON)
+* **MongoDB C/C++ Drivers:** libmongocrypt.ps1 &rarr; mongo-c-driver.ps1 &rarr; mongo-cxx-driver.ps1
+  - OpenSSL is required when MONGOCRYPT_CRYPTO = OpenSSL or ENABLE_SSL=OPENSSL is specified
 
 ## Builds on Linux
