@@ -56,7 +56,7 @@
   - Server
     * ```mysqld --defaults-file=my.cnf -u root --console```
     * ```mysqladmin -u root status/shutdown -p```
-  - Client: ```mysql -u root -p```
+  - Client: ```mysql -u <username> -p```
 * **PostgreSQL:** build-postgresql.sh
   - The configuration directory may include ```pg_hba.conf```, ```pg_ident.conf```, ```pg_service.conf``` and ```postgresql.conf```
     * In ```pg_hba.conf```, please comment at the very end every line begining with ```@remove-line-for-nolocal``` and type ```scram-sha-256``` as ```METHOD```
