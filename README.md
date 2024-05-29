@@ -68,3 +68,9 @@
       - ```\q```
   - Server: ```pg_ctl -D <conf/data_dir> -U <username> start/stop/status```
   - Client: ```psql -U <username>```
+
+## Homework Grading on Linux (Linux/Grading)
+* **PostgreSQL Assignments (PostgreSQLHwk)** 
+  - Use ```rclone copy``` to retreive submitted student files from SharePoint/OneDrive (download.sh) with the option ```--filter-from``` to filter the files based on the rule (filterfiles.txt)
+  - The main file used for grading is grade-all.sh where the file grade-single.sh is called
+    * Run ```chmod +x grade*``` to make grade-all.sh and grade-single.sh executable
