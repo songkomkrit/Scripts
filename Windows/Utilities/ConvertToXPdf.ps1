@@ -30,7 +30,7 @@ function My-WriteLog {
 }
 
 function Get-MSDllPath {
-	param ([String] $Software)	# Word or PowerPoint	
+	param ([String] $Software) # Word or PowerPoint	
 	$dllMainDir = "C:\Windows\assembly\GAC_MSIL"
 	$dllSubDir = "Microsoft.Office.Interop." + $Software
 	$verToken = (Get-ChildItem -Path $dllMainDir\$dllSubDir).Name
@@ -76,9 +76,9 @@ foreach ($wordFile in $wordFiles) {
 	$count++
 	Write-Host "WI ($count/$n) $wordFile"
 	if ($Type.ToLower() -eq "pdf") {
-		$outFile = $ppFile.FullName -replace ".docx", ".pdf"
+		$outFile = $wordFile.FullName -replace ".docx", ".pdf"
 	} elseif ($Type.ToLower() -eq "x") {
-		$outFile = $ppFile.FullName -replace ".doc", ".docx"
+		$outFile = $wordFile.FullName -replace ".doc", ".docx"
 	}
 	$Success = $true
 	$ExistPDF = Test-Path -Path $outFile
@@ -96,14 +96,16 @@ foreach ($wordFile in $wordFiles) {
 				$document.SaveAs($outFile, `
 					[Microsoft.Office.Interop.Word.WdSaveFormat]::wdFormatDocumentDefault)
 			}
-			$document.Close()
-			$word.Quit()
 		}
 		catch {
 			$Success = $false
 			Write-Host "W-Unsuccessful ($count/$n)`n"
 			My-WriteLog -LogPath $LogFile `
 				-LogString "W-Unsuccessful ($count/$n) $wordFile"
+		}
+		finally {
+			$document.Close()
+			$word.Quit()
 		}
 	}
 	
@@ -144,14 +146,16 @@ foreach ($ppFile in $ppFiles) {
 				$presentation.SaveAs($outFile, `
 					[Microsoft.Office.Interop.PowerPoint.PpSaveAsFileType]::ppSaveAsDefault)
 			}
-			$presentation.Close()
-			$pp.Quit()
 		}
 		catch {
 			$Success = $false
 			Write-Host "P-Unsuccessful ($count/$n)`n"
 			My-WriteLog -LogPath $LogFile `
 				-LogString "P-Unsuccessful ($count/$n) $ppFile"
+		}
+		finally {
+			$presentation.Close()
+			$pp.Quit()
 		}
 	}
 	
