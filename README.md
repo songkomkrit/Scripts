@@ -47,4 +47,9 @@
 * **Mosquitto MQTT:** build-mosquitto.sh
 * **MySQL:** build-mysql.sh
   - Create the configuration file ```my.cnf``` containing ```[mysqld]```, ```basedir```, ```lc_messages_dir```, ```datadir```, ```log_bin```, ```general_log=1```, ```general_log_file```, ```log_error```, ```slow_query_log=1``` and ```slow_query_log_file```
+  - Initialization: ```mysqld --defaults-file=my.cnf --initialize```
+  - Server
+    * ```mysqld --defaults-file=my.cnf -u root --console```
+    * ```mysqladmin -u root status/shutdown -p```
+  - Client: ```mysql -u root -p```
 * **PostgreSQL:** build-postgresql.sh
