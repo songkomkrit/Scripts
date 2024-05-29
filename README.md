@@ -19,7 +19,7 @@
 
 ## Builds on Windows (Windows/Builds)
 * **Perl:** BuildPerl5.ps1
-  - To upgrade the installed modules, run ```cpan -u```
+  - To upgrade all installed modules, run ```cpan -u```
   - Wget binary can be downloaded from https://eternallybored.org/misc/wget
   - setx PERL_LWP_SSL_VERIFY_HOSTNAME -m 0
   - setx PERL_NET_HTTPS_SSL_SOCKET_CLASS -m Net::SSL
