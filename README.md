@@ -45,6 +45,12 @@
 * **GCC:** build-gcc.sh
   - GCC11 can be installed via the command ```sudo apt install build-essential```
   - GCC11 is used to build the latest GCC15 (Experimental)
+* **Boost C++ Libraries**: build-boost.sh and config/user-config.jam
+  - ```git clone -j8 --recurse-submodules https://github.com/boostorg/boost.git```
+  - cd boost
+  - ```./bootstrap.sh```
+  - ./build-boost.sh (```./b2 install``` ...)
+    * Three build variants are available: release, debug and profile (www.boost.org/build/tutorial.html)
 * **Perl:** build-perl5.sh
 * **OpenSSL:** build-openssl.sh
 * **Python 3.12:** build-python312.sh
