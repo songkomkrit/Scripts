@@ -4,7 +4,9 @@
 * **Convert DOC/PPT to DOCX/PPTX to PDF:** ConvertToXPdf.ps1
 
 ## Parallel Mode
-* ```git clone -j<N>```
+* ```git clone -j<N> --recurse-submodules```
+* ```msbuild <.sln_file> /m:<N> /p:Configuration=Release /p:Platform=x64 /p:SkipUWP=true```
+* ```cmake --build . --config Release --target INSTALL --parallel <N>```
 
 ## Builds on Windows
 * **Perl:** BuildPerl5.ps1
