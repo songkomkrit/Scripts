@@ -2,7 +2,7 @@
 
 ## Windows Utilities (Windows/Utilities)
 * **Convert DOC/PPT to DOCX/PPTX to PDF:** ConvertToXPdf.ps1
-  - ```.\ConvertToXPdf.ps1 -Type <pdf:default/x -Path <Directory> -Dry <$true:default/$false>```
+  - ```.\ConvertToXPdf.ps1 -Type <pdf:default/x> -Path <Directory> -Dry <$true:default/$false>```
   - To convert from DOC/PPT to DOCX/PPTX, run ```.\ConvertToXPdf.ps1 -Type x -Path <Directory> -Dry $false```
   - To convert from DOCX/PPTX to PDF, run ```.\ConvertToXPdf.ps1 -Path <Directory> -Dry $false```
     
