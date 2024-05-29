@@ -7,7 +7,7 @@
   - To convert from DOCX/PPTX to PDF, run ```.\ConvertToXPdf.ps1 -Path <Directory> -Dry $false```
     
 ## Parallel Mode
-* ```git clone/pull -j<N> --recurse-submodules```
+* ```git clone/pull -j<N> [--recurse-submodules]```
 * ```msbuild <.sln_file> /m:<N> /p:Configuration=<Release/Debug> /p:Platform=x64 /p:SkipUWP=true```
 * ```cmake --build . --config <Release/Debug> --target INSTALL --parallel <N>```
 * ```make -j<N> [install]```
