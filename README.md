@@ -1,2 +1,1 @@
-# Scripts
-Windows PowerShell and Linux Bash Scripts
+# Windows PowerShell and Linux Bash Scripts
