@@ -5,4 +5,4 @@ Some scripts for Windows PowerShell and Linux Bash are provided:
 # Builds
 * **Perl:** BuildPerl5.ps1
 * **OpenSSL:** BuildOpenSSL.ps1
-* **MongoDB C/C++ Drivers:** libmongocrypt.ps1 &rarr mongo-c-driver.ps1 &rarr mongo-cxx-driver.ps1
+* **MongoDB C/C++ Drivers:** libmongocrypt.ps1 &rarr; mongo-c-driver.ps1 &rarr; mongo-cxx-driver.ps1
