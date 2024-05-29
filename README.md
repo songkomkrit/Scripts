@@ -71,6 +71,6 @@
 
 ## Homework Grading on Linux (Linux/Grading)
 * **PostgreSQL Assignments (PostgreSQLHwk)** 
-  - Use ```rclone copy``` to retreive submitted student files from SharePoint/OneDrive (download.sh) with the option ```--filter-from``` to filter the files based on the rule (filterfiles.txt)
-  - The main file used for grading is grade-all.sh where the file grade-single.sh is called
-    * Run ```chmod +x grade*``` to make grade-all.sh and grade-single.sh executable
+  - Use ```rclone copy``` (rclone.org) to retreive submitted student files from SharePoint/OneDrive by executing the file <em>download.sh</em> with the option ```--filter-from``` to filter the files based on the rule listed in <em>filterfiles.txt</em>
+  - The main file used for grading is <em>grade-all.sh</em> where the file <em>grade-single.sh</em> is called
+    * Run ```chmod +x grade*``` to make <em>grade-all.sh</em> and <em>grade-single.sh</em> executable
