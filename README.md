@@ -38,7 +38,7 @@
 ## Builds on Linux (Linux/Builds)
 * **Add environment variables (if necessary) to ```.bashrc```**
   - ```export PATH="${MY_INSTALL_DIR}/bin:$PATH"```
-  - ```export LD_LIBRARY_PATH="${MY_LIBRARY_DIR}/${LD_LIBRARY_PATH}"```
+  - ```export LD_LIBRARY_PATH="${MY_LIBRARY_DIR}:${LD_LIBRARY_PATH}"```
   - ```export LDFLAGS="$LDFLAGS -L${MY_LIBRARY_DIR} -Wl,-rpath,${MY_LIBRARY_DIR}"```
   - In the case of building with address sanitizer (ASAN), thought not recommended for production use, please add ```export LD_PRELOAD=$(gcc -print-file-name=libasan.so)```
 * **GCC:** build-gcc.sh
