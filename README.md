@@ -16,6 +16,7 @@
 
 ## Builds on Windows (Windows/Builds)
 * **Perl:** BuildPerl5.ps1
+  - To upgrade the installed modules, run ```cpan -u```
   - Wget binary can be downloaded from https://eternallybored.org/misc/wget
   - setx PERL_LWP_SSL_VERIFY_HOSTNAME -m 0
   - setx PERL_NET_HTTPS_SSL_SOCKET_CLASS -m Net::SSL
@@ -29,6 +30,6 @@
   - mosquitto_pub.exe (publisher) and mosquitto_sub.exe (subscriber) are in ```bin``` directory
   - OpenSSL is required when Mosquitto is built with SSL/TLS support (WITH_TLS = ON)
 * **MongoDB C/C++ Drivers:** libmongocrypt.ps1 &rarr; mongo-c-driver.ps1 &rarr; mongo-cxx-driver.ps1
-  - OpenSSL is required when MONGOCRYPT_CRYPTO = OpenSSL or ENABLE_SSL=OPENSSL is specified
+  - OpenSSL is required when MONGOCRYPT_CRYPTO = OpenSSL or ENABLE_SSL = OPENSSL is specified
 
 ## Builds on Linux
