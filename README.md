@@ -35,4 +35,16 @@
 * **MongoDB C/C++ Drivers:** libmongocrypt.ps1 &rarr; mongo-c-driver.ps1 &rarr; mongo-cxx-driver.ps1
   - OpenSSL is required when MONGOCRYPT_CRYPTO = OpenSSL or ENABLE_SSL = OPENSSL is specified
 
-## Builds on Linux
+## Builds on Linux (Linux/Builds)
+* **GCC:** build-gcc.sh
+  - GCC11 can be installed via the command ```sudo apt install build-essential```
+  - GCC11 is used to build the latest GCC15 (Experimental)
+* **Perl:** build-perl5.sh
+* **OpenSSL:** build-openssl.sh
+* **Python 3.12:** build-python312.sh
+  - To suppress warnings, use ```export PYTHONWARNINGS="ignore::DeprecationWarning"```
+* **cURL:** build-curl.sh
+* **Mosquitto MQTT:** build-mosquitto.sh
+* **MySQL:** build-mysql.sh
+  - Create the configuration file ```my.cnf``` containing ```[mysqld]```, ```basedir```, ```lc_messages_dir```, ```datadir```, ```log_bin```, ```general_log=1```, ```general_log_file```, ```log_error```, ```slow_query_log=1``` and ```slow_query_log_file```
+* **PostgreSQL:** build-postgresql.sh
