@@ -15,6 +15,11 @@
 * ```mingw32-make -j<N>```
 * ```mingw32-make -j<N> install```
 
+## Useful Commands
+* ```git reset --hard --recurse-submodules```
+* ```git clean --dry-run -fdx```
+* ```git clean -fdx```
+
 ## Builds on Windows
 * **Perl:** BuildPerl5.ps1
 * **OpenSSL:** BuildOpenSSL.ps1
