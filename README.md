@@ -1,6 +1,6 @@
 # Scripts
 
-## Windows Utilities (Windows/Utilities/)
+## Windows Utilities (Windows/Utilities)
 * **Convert DOC/PPT to DOCX/PPTX to PDF:** ConvertToXPdf.ps1
 
 ## Parallel Mode
@@ -14,7 +14,7 @@
 * ```git reset --hard --recurse-submodules```
 * ```git clean [--dry-run] -fdx```
 
-## Builds on Windows (Windows/Builds/)
+## Builds on Windows (Windows/Builds)
 * **Perl:** BuildPerl5.ps1
   - Wget binary can be downloaded from https://eternallybored.org/misc/wget
   - setx PERL_LWP_SSL_VERIFY_HOSTNAME -m 0
