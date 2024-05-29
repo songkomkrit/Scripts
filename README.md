@@ -36,6 +36,11 @@
   - OpenSSL is required when MONGOCRYPT_CRYPTO = OpenSSL or ENABLE_SSL = OPENSSL is specified
 
 ## Builds on Linux (Linux/Builds)
+* **Add environment variables (if necessary) to ```.bashrc```**
+  - ```export PATH="${INSTALL_DIR}/bin:$PATH"```
+  - ```export LD_LIBRARY_PATH="${LIBRARY_DIR}/${LD_LIBRARY_PATH}"```
+  - ```export LDFLAGS="$LDFLAGS -L${LIBRARY_DIR} -Wl,-rpath,${LIBRARY_DIR}"```
+  - In the case of building with address sanitizer (ASAN), thought not recommended for production use, please add ```export LD_PRELOAD=$(gcc -print-file-name=libasan.so)```
 * **GCC:** build-gcc.sh
   - GCC11 can be installed via the command ```sudo apt install build-essential```
   - GCC11 is used to build the latest GCC15 (Experimental)
