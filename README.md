@@ -12,6 +12,7 @@
 * ```cmake --build . --config <Release/Debug> --target INSTALL --parallel <N>```
 * ```make -j<N> [install]```
 * ```mingw32-make -j<N> [install]```
+* ```b2 install -j<N>```
 
 ## Useful Commands
 * ```git reset --hard --recurse-submodules```
