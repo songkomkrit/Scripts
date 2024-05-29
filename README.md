@@ -2,7 +2,10 @@
 
 ## Windows Utilities (Windows/Utilities)
 * **Convert DOC/PPT to DOCX/PPTX to PDF:** ConvertToXPdf.ps1
-
+  - ```.\msconvert.ps1 -Type <pdf:default/x -Path <Directory> -Dry <$true:default/$false>```
+  - **Convert DOC/PPT to DOCX/PPTX:** ```.\msconvert.ps1 -Type x -Path <Directory> -Dry $false```
+  - **Convert DOCX/PPTX to PDF:** ```.\msconvert.ps1 -Path <Directory> -Dry $false```
+    
 ## Parallel Mode
 * ```git clone/pull -j<N> --recurse-submodules```
 * ```msbuild <.sln_file> /m:<N> /p:Configuration=<Release/Debug> /p:Platform=x64 /p:SkipUWP=true```
