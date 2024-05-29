@@ -1,0 +1,10 @@
+# GCC Configuration
+# using gcc ;
+using gcc : 15.0 : <path_to_g++> ;
+
+# Python Configuration
+# using python ;
+using python : : <path_to_python3> ;
+
+# MPI-based Parallel Components
+using mpi ;
