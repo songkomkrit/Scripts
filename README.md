@@ -3,6 +3,9 @@
 ## Utilities
 * **Convert DOC/PPT to DOCX/PPTX to PDF:** ConvertToXPdf.ps1
 
+## Parallel Mode
+* ```git clone -j<N>```
+
 ## Builds on Windows
 * **Perl:** BuildPerl5.ps1
 * **OpenSSL:** BuildOpenSSL.ps1
